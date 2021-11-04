@@ -1,5 +1,10 @@
 <?php
-// opcache_reset();
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+opcache_reset();
+
 $datos = array(
 	'nombre' => 'C&eacute;sar', 
 	'apellido' => 'Alvis', 
@@ -18,10 +23,10 @@ $datos = array(
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 <body class="container bg-secondary">
-	<header class="container text-dark bg-light text-center">
+	<header class="container text-dark bg-light text-center mt-2">
 		<span class="fs-1">Informaci&oacute;n Personal</span>
 	</header>
-	<main class="container bg-light p-2">
+	<main class="container p-2 bg-light">
 		<ul class="list-group rounded-0">
 			<li class="list-group-item">
 				Nombre: <?=$datos['nombre']?>
@@ -30,7 +35,7 @@ $datos = array(
 				Apellido: <?=$datos['apellido']?>
 			</li>
 			<li class="list-group-item">
-				Edad: <?=$datos['edad']?>	
+				Edad: <?=$datos['edad']?>
 			</li>
 			<li class="list-group-item">
 				Hobbie: <?=$datos['hobbie']?>
@@ -43,7 +48,7 @@ $datos = array(
 			</li>
 		</ul>
 	</main>
-	<footer class="container d-flex flex-column flex-sm-row alert-dark my-2 py-2">
+	<footer class="container d-flex flex-column flex-sm-row alert-dark my-1 py-1">
 		<span class="mx-auto">PHP FullStack</span>
 		<span class="fw-bold mx-auto"><?=$datos['nombre'] . ' ' . $datos['apellido']?></span>
 		<span class="mx-auto">Comisi&oacute;n 2162</span>
